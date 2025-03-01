@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: gray;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.signal-container{
+    height: 300px;
+    width: 110px;
+    background-color: black;
+    border-radius: 2rem;
+    border: 1.5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.signals{
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+     opacity: 0.2; /* default off */
+    
+}
+.red{
+    background-color: red;
+    animation: traffic-color 5s infinite 1s;
+}
+.yellow{
+    background-color: yellow;
+    animation: traffic-color 5s infinite;
+}
+.green{
+    background-color: #00ff11;
+    animation: traffic-color 5s infinite 2s;
+}
+.signal-rod-container{
+    height: 350px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+.signal-rod{
+    height: 350px;
+    width: 20px;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.heading{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10rem;
+    position: absolute;
+    z-index: -1;
+    letter-spacing: 10px;
+    bottom: 8rem;
+    color: white;
+    text-shadow: 5px 5px 10px #000000;
+
+}
+
+    /* Animation */
+    @keyframes traffic-color {
+        0% {
+          opacity: 1; /* Red on */
+        }
+        33% {
+          opacity: 0.2; /* Red off */
+        }
+        34% {
+          opacity: 1; /* Yellow on */
+        }
+        66% {
+          opacity: 0.2; /* Yellow off */
+        }
+        67% {
+          opacity: 1; /* Green on */
+        }
+        100% {
+          opacity: 0.2; /* Green off */
+        }
+      }
